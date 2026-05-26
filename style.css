@@ -18,7 +18,6 @@
 body {
   height: 100dvh;
   width: 100dvw;
-  overflow: hidden;
   background-color: var(--bgPrimary);
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
