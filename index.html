@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Finance Analictics</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <nav class="sidebar">
+        <!--<button class="ham clicked" id="hamBtn">☰</button>-->
+        <div class="hide">
+          <form id="form">
+            <div class="sidebar-elements">
+              <div class="sidebar-element">
+                <label for="date">Date</label>
+                <input type="date" id="date" />
+                <p id="message" class="error brr"></p>
+              </div>
+              <div class="sidebar-element">
+                <label for="text">Value</label>
+                <input type="number" id="text" />
+                <p id="message" class="error err"></p>
+              </div>
+              <button title="submit" type="submit" class="btn" id="submitBtn">
+                Submit
+              </button>
+            </div>
+          </form>
+          <div class="list" id="">
+            <h3>List log</h3>
+            <ul id="list"></ul>
+          </div>
+          <button class="cler btn">Clear</button>
+        </div>
+      </nav>
+
+      <!--DASHBOARD SECTION-->
+      <section class="dashboard-section">
+        <!--HEAEDER SECTION-->
+        <header class="dashboard-header">
+          <h2>Finance Dashboard</h2>
+        </header>
+        <!--BOTTOM CARDS SECTION-->
+        <div class="dashboard-cards" class="max">
+          <div class="dashboard-card">
+            <h3>Highest income of the year</h3>
+            <h4 class="max" id="max">KSH 0.00</h4>
+          </div>
+
+          <div class="dashboard-card">
+            <h3>Monthly Avg Income</h3>
+            <h4 class="gro">0.00%</h4>
+          </div>
+
+          <div class="dashboard-card">
+            <h3>Yearly Avg income</h3>
+            <h4 id="yearAverage">KSH 0.00</h4>
+          </div>
+
+          <div class="dashboard-card">
+            <h3>Total yearly income</h3>
+            <h4 id="total">KSH 0.00</h4>
+          </div>
+        </div>
+        <!--CHART SECTION-->
+        <div class="charts">
+          <div class="chart-main text">
+            <canvas id="chart"></canvas>
+          </div>
+
+          <div class="chart-sec">
+            <div class="chart-min">
+              <canvas id="chartWeek"></canvas>
+            </div>
+            <div class="chart-min">
+              <canvas id="chartYear"></canvas>
+            </div>
+          </div>
+        </div>
+        <!--BOTTOM CARDS SECTION-->
+        <div class="bottom dashboard-cards bottom">
+          <div class="dashboard-card">
+            <h3>Total Monthly Income</h3>
+            <h4 id="">KSH 0.00</h4>
+          </div>
+
+          <div class="dashboard-card">
+            <h3>Avg Monthly income</h3>
+            <h4 id="month">KSH 0.00</h4>
+          </div>
+
+          <div class="dashboard-card">
+            <h3>Years Avg Income</h3>
+            <h4 id="yearGrowth">0%</h4>
+          </div>
+
+          <div class="dashboard-card">
+            <h3>Total Income</h3>
+            <h4 class="maxes" id="totalRevenue">KSH 0.00</h4>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
